@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600;700&display=swap');
+/* Reset & body */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: #1a1a1a; /* Dark gray base for whole page */ /* black background for whole page */
+}
+
+/* Container for split layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left side - branding */
+.left-side {
+    flex: 1;
+   background: linear-gradient(135deg, #111111, #333333); /* Dark gradient */
+    color: #ffd700; /* Golden text for headings */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.left-side h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ffd700;
+    font-family: 'Raleway';
+    font-weight: 100;
+}
+
+.left-side p {
+    font-size: 1.2em;
+    line-height: 1.5;
+     color: #ccc; 
+}
+
+/* Right side - form */
+.right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+     background-color: #222; 
+    box-shadow: -5px 0 20px rgba(0,0,0,0.5); 
+    color: #fff; 
+}
+
+/* Forms */
+form {
+    width: 100%;
+    max-width: 400px;
+}
+
+form h2 {
+    text-align: center;
+    color: #bfa82b; /* golden heading */
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #fff; /* white label */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555; /* gray border */
+    border-radius: 6px;
+    background-color: #333; /* dark input background */
+    color: #fff;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #bfa82b;
+    box-shadow: 0 0 5px rgba(191, 168, 43, 0.5);
+    outline: none;
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+/* Buttons */
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #bfa82b, #000);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.signup-btn:hover {
+    background: linear-gradient(90deg, #000, #bfa82b);
+}
+
+/* Toggle link */
+.toggle-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.toggle-link a {
+    color: #bfa82b; /* golden link */
+    text-decoration: none;
+}
+
+.toggle-link a:hover {
+    text-decoration: underline;
+}
+
+/* Hide form */
+.hidden {
+    display: none;
+}
+#showLogin{
+    color:  #bfa82b;
+}
+#showRegister{
+    color: #bfa82b;
+}
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-side, .right-side {
+        flex: unset;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .left-side h1 {
+        font-size: 2.5em;
+    }
+}

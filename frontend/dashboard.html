@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Dashboard - Engage System</title>
+    <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>ENGAGE SYSTEM</h2>
+            </div>
+            <div class="modal-body">
+                <p>Enter your designation to proceed:</p>
+                <input type="text" id="usernameInput" placeholder="Your designation..." maxlength="20">
+                <button id="engageBtn" class="btn-primary">ENGAGE SYSTEM</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard Container -->
+    <div id="dashboard" class="dashboard-container hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">SOCIAL DASHBOARD</h1>
+                <div class="user-info">
+                    <span id="currentUser" class="username"></span>
+                    <button id="logoutBtn" class="btn-secondary">DISENGAGE</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>NAVIGATION</h3>
+                    <button id="newPostBtn" class="btn-primary sidebar-btn">
+                        <span>⚡</span> TRANSMIT NEW DATA?
+                    </button>
+                </div>
+                <div class="sidebar-section">
+                    <h3>FEED CONTROLS</h3>
+                    <div class="control-group">
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search posts...">
+                    </div>
+                    <div class="control-group">
+                        <label for="sortSelect">Sort by:</label>
+                        <select id="sortSelect" class="sort-select">
+                            <option value="latest">Latest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="mostLiked">Most Liked</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <h3>STATISTICS</h3>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Total Posts:</span>
+                            <span id="totalPosts" class="stat-value">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Your Posts:</span>
+                            <span id="userPosts" class="stat-value">0</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Feed Area -->
+            <main class="feed-container">
+                <div id="postsFeed" class="posts-feed">
+                    <!-- Posts will be dynamically inserted here -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Post Creation Modal -->
+    <div id="postModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>TRANSMIT NEW DATA</h2>
+                <button class="close-btn" id="closePostModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <textarea id="postText" placeholder="Enter your transmission..." rows="6"></textarea>
+                <div class="image-upload-section">
+                    <label for="imageInput" class="file-label">
+                        <span>📎 SELECT IMAGE</span>
+                    </label>
+                    <input type="file" id="imageInput" accept="image/*" class="file-input">
+                    <div id="imagePreview" class="image-preview hidden"></div>
+                </div>
+                <div class="modal-actions">
+                    <button id="cancelPostBtn" class="btn-secondary">CANCEL</button>
+                    <button id="transmitBtn" class="btn-primary" disabled>TRANSMIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/dashboard.js"></script>
+</body>
+</html>
+

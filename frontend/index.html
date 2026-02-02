@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Webify Signup/Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side - Branding -->
+        <div class="left-side">
+            <h1 class="animate__animated flip-left">Webify</h1>
+            <p>Join our platform to connect with the world and grow your network.</p>
+        </div>
+
+        <!-- Right Side - Forms -->
+        <div class="right-side">
+            <!-- Register Form -->
+            <form id="registerForm"  >
+                <h2>Create Account</h2>
+                <div class="input-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="Enter your first name" >
+                </div>
+                <div class="input-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Enter your last name">
+                </div>
+                <div class="input-group">
+                    <label for="emailReg">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <label for="passwordReg">Password</label>
+                    <input type="password" id="password" placeholder="Create a password">
+                </div>
+                <button type="submit" class="signup-btn">Sign Up</button>
+                <p style="text-align:center; margin-top:10px;">
+                    Already have an account? <a href="#" id="showLogin">Login</a>
+                </p>
+            </form>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="hidden" >
+                <h2>Login</h2>
+                <div class="input-group">
+                    <label for="emailLogin">Email</label>
+                    <input type="email" id="emailLogin" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="passwordLogin">Password</label>
+                    <input type="password" id="passwordLogin" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="signup-btn">Login</button>
+                <p style="text-align:center; margin-top:10px;">
+                    Don't have an account? <a href="#" id="showRegister">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
